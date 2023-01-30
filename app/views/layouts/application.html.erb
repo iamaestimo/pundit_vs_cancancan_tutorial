@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pundit Vs Cancancan Tutorial</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+  <!--topbar/notice and navbar-->
+  <% if notice %>
+      <div class="alert alert-success"><p><%= notice %></p></div>
+    <% elsif alert %>
+      <div class="alert alert-warning"><p><%= alert %></p></div>
+    <% end %>
+    <%= render 'shared/navbar' %>
+  <!--//topbar/notice and navbar-->
+    
+    <div class="container">
+      <%= yield %>
+    </div>    
+  </body>
+</html>
