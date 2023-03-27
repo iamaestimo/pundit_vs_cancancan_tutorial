@@ -19,6 +19,19 @@
     <%= form.text_area :body, class: 'form-control', rows: 5, placholder: 'Post title' %>
   </div>
 
+  <div class="form-check">
+    <%= form.radio_button :published, true, class: 'form-check-input' %>
+    <label class="form-check-label" for="flexCheckDefault">
+      Published
+    </label>
+  </div>
+  <div class="form-check">
+    <%= form.radio_button :published, false, class: 'form-check-input' %>
+    <label class="form-check-label" for="flexCheckChecked">
+      Draft
+    </label>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>
